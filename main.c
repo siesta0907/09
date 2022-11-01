@@ -1,6 +1,10 @@
 #include <stdio.h>
 #define ROWS 3
 #define COLS 3
+
+void addMatrx(int A[][COLS], int B[][COLS], int C[][COLS]);
+void printMatrx(int A[][COLS]);
+
 int main(void)
 {
 	int A[ROWS][COLS] = { 
@@ -13,8 +17,8 @@ int main(void)
 	 {0, 0, 1} };
 	
 	int C[ROWS][COLS]; 
-	addMatrix(A, B, C);
-	printMatrix(C);
+	addMatrx(A, B, C);
+	printMatrx(C);
 	
 	return 0;
 }
@@ -34,7 +38,7 @@ void printMatrx(int A[][COLS])
 	int i,j;
 	for (i =0; i<COLS; i++){
 		for (j =0; j<ROWS; j++){
-			printf("%d",A[i][j]); 
+			printf("%d ",A[i][j]); 
 		}
 		printf("\n");
 	}
